@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width">
   <title>Corpus de texte</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/porched/semantic/dist/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="/porched/style.css">
+  <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-  <script src="/porched/semantic/dist/semantic.min.js"></script>
+  <script src="/semantic/dist/semantic.min.js"></script>
 </head>
 
 <body>
   <!-- header -->
   <div class="ui inverted stackable borderless top fixed menu topbar">
     <div class="ui container">
-      <a class="item" href="/porched/fr/">
-        <h1 class="ui inverted header"><img src="/porched/images/LogoOPLB.svg">
+      <a class="item" href="/fr/">
+        <h1 class="ui inverted header"><img src="/images/LogoOPLB.svg">
           <div class="content">Portail numérique de la langue bretonne<div class="ui sub header">Office public de la langue bretonne</div>
           </div>
         </h1>
@@ -28,7 +28,7 @@
             français
             <i class="dropdown icon"></i>
             <div class="menu">
-              <a href="/porched/br/" class="item">brezhoneg</a>
+              <a href="/br/" class="item">brezhoneg</a>
             </div>
           </div>
         </div>
@@ -37,93 +37,7 @@
   </div>
   <div class="full height">
     <!-- side menu -->
-    <div class="toc">
-      <div class="ui vertical secondary big menu">
-        <div class="header item">
-          <div class="ui sub header">Ressources numériques</div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          Dictionnaires
-          <i class="book icon"></i>
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/meurgorf/"><em data-emoji=":book:"></em>MeurGorf - Dictionnaire historique du breton</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          Bases de données
-          <i class="database icon"></i>
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/kerofis/"><em data-emoji=":map:"></em>KerOfis - Base de donnée toponymique</a>
-            <a class="item" href="http://www.fr.brezhoneg.bzh/36-termofis.htm"><em data-emoji=":mag:"></em>TermOfis - Base de donnée terminologique</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="folder icon"></i>
-          Corpus
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a href="/porched/fr/corpus/text/" class="item"><i class="file alternate icon"></i>Corpus textuel</a>
-            <a href="/porched/fr/corpus/audio/" class="item"><i class="file audio icon"></i>Corpus audio</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="user icon"></i>
-          Utiliser le breton
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a href="/porched/fr/utiliser/" class="item">
-              <i class="users icon"></i>
-              Sur les réseaux sociaux
-            </a>
-            <a href="#" class="item">
-              <i class="desktop icon"></i>
-              Sur son site internet
-            </a>
-          </div>
-        </div>
-        <div class="ui divider">
-        </div>
-        <div class="header item">
-          <div class="ui sub header">Outils numériques</div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="globe europe icon"></i>Traduction
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/apertium/index.fra.html"><i class="language icon"></i>Apertium - Traducteur automatique</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="microphone icon"></i>
-          Parole
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/sintezenn/"><i class="comment icon"></i>Sintezenn - Synthèse de la parole</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="tools icon"></i>
-          Autres outils
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a href="#" class="item"><i class="spell check icon"></i>Correcteurs orthographiques</a>
-          </div>
-        </div>
-        <div class="ui divider"></div>
-        <div class="header item">
-          <div class="ui sub header">Les technologies de la langue</div>
-        </div>
-        <a class="item" href="/porched/fr/strategie/">
-          <i class="tasks icon"></i>Stratégie numérique
-        </a>
-        <a class="item">
-          <i class="question icon"></i>A propos
-        </a>
-        <div class="ui divider"></div>
-      </div>
-    </div>
+    <?php require('../includes/menu.html') ?>
     <!-- end side menu -->
     <div class="page">
       <div class="ui doubling stackable grid container main">
@@ -148,35 +62,32 @@
             </div>
             <h2 class="ui header">Corpus monolingues</h2>
 
-            <div class="ui stackable three column grid">
-              <div class="column">
+            <div class="ui pink cards">
 
-                <a class="ui pink fluid card" href="https://wortschatz.uni-leipzig.de/en/download/Breton">
+
+                <a class="card" href="https://wortschatz.uni-leipzig.de/en/download/Breton">
                   <div class="content">
                     <div class="header">
                       <em data-emoji=":page_facing_up:" class="small right floated"></em>
                       Corpus Leipzig
                     </div>
                     <div class="meta">
-                      Mis à jour en 2016
+                      Dernière mise à jour en 2021
                     </div>
                     <div class="description">
                       <p>Corpus monolingues, non annotés, extraits à partir du Wikipédia breton.</p>
                       <p><i class="arrows alternate horizontal icon"></i> 10 000, 30 000 et 100 000 phrases</p>
-
+                      <div class="ui label"></div>
                     </div>
                   </div>
                   <div class="extra content">
-                    <button class="ui labeled icon pink fluid button">
+                    <button class="ui labeled icon pink right floated button">
                       <i class="external link icon"></i>
                       Accéder à la ressource
                     </button>
                   </div>
                 </a>
-              </div>
-              <div class="column">
-
-                <a class="ui pink fluid card" href="#">
+                <a class="card" href="#">
                   <div class="content">
                     <div class="header">
                       <em data-emoji=":page_facing_up:" class="small right floated"></em>
@@ -201,19 +112,19 @@
                     </button>
                   </div>
                 </a>
-              </div>
             </div>
 
 
             <h2 class="ui header">Corpus multilingues</h2>
             <p>Un corpus multilingue est un corpus qui présente des documents
               identitques ou semblables dans au moins deux langues différentes.</p>
-            <div class="ui stackable three column grid">
-              <div class="column">
-              <a class="ui pink fluid card" href="#">
+
+            <div class="ui pink cards">
+              <a class="card" href="#">
                 <div class="content">
                   <div class="header">
-                    Corpus de l'OPLB
+                    <em data-emoji=":page_facing_up:" class="small right floated"></em>
+                    Corpus OPLB 20 000
                   </div>
                   <div class="meta">
                     Mis à jour en octobre 2018
@@ -232,12 +143,11 @@
                   </button>
                 </div>
               </a>
-            </div>
-            <div class="column">
-              <a class="ui pink fluid card" href="#">
+              <a class="card" href="#">
                 <div class="content">
                   <div class="header">
-                    Corpus OPUS
+                    <em data-emoji=":page_facing_up:" class="small right floated"></em>
+                    Corpus OPUS NLP
                   </div>
                   <div class="meta">
                     Mis à jour en février 2021
@@ -262,61 +172,36 @@
                   </button>
                 </div>
               </a>
-            </div>
-
+              <a class="card" href="#">
+                <div class="content">
+                  <div class="header">
+                    <em data-emoji=":page_facing_up:" class="small right floated"></em>
+                    Corpus UDHR
+                  </div>
+                  <div class="meta">
+                    Dernière mise à jour en juin 2021
+                  </div>
+                  <div class="description">
+                    <p>
+                      Universal Declaration of Human Rights.
+                      Déclaration Universelle des Droits de l'Homme traduite dans de nombreuses langues. Ce corpus est maintenu par le consortium UNICODE.
+                    </p>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <button href="https://unicode.org/udhr/index.html" class="ui labeled icon pink right floated button">
+                    <i class="external link icon"></i>
+                    Accéder à la ressource
+                  </button>
+                </div>
+              </a>
             </div>
             <div class="ui hidden divider"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer ui basic segment">
-      <div class="ui three column grid container ">
-        <div class="column">
-          <div class="ui basic segment">
-            <h4 class="ui header">L'Office public de la langue bretonne</h4>
-            <div class="ui link list">
-              <a href="#" class="item">
-                <i class="external alternate icon"></i>
-                <div class="content">Site internet</div>
-              </a>
-              <a class="item">
-                <i class="envelope icon"></i>
-                <div class="content">Contact</div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui basic segment">
-            <h4 class="ui header">Réseaux sociaux</h4>
-            <div class="ui link list">
-              <a class="item">
-                <i class="twitter icon"></i>
-                <div class="content">Twitter</div>
-              </a>
-              <a class="item">
-                <i class="facebook icon"></i>
-                <div class="content">Facebook</div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui basic segment">
-            <div class="ui link list">
-              <div class="item">
-                Copyright © 2021 - Ofis publik ar brezhoneg
-              </div>
-              <a href="#" class="item">Politique de confidentialité</a>
-              <div class="item">Ce site n'utilise pas de cookies</div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
+      <?php require('../includes/footer.html') ?>
     </div>
 
   </div>
