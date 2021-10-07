@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width">
     <title>Corpus audio</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/porched/semantic/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="/porched/style.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <script src="/porched/semantic/dist/semantic.min.js"></script>
+    <script src="/semantic/dist/semantic.min.js"></script>
   </head>
   <body>
 
@@ -15,8 +15,8 @@
     <!-- header -->
     <div class="ui inverted stackable borderless top fixed menu topbar">
       <div class="ui container">
-        <a class="item" href="/porched/fr/">
-          <h1 class="ui inverted header"><img src="/porched/images/LogoOPLB.svg">
+        <a class="item" href="/fr/">
+          <h1 class="ui inverted header"><img src="/images/LogoOPLB.svg">
           <div class="content">Portail numérique de la langue bretonne<div class="ui sub header">Office public de la langue bretonne</div>
         </div>
         </h1>
@@ -28,7 +28,7 @@
             français
             <i class="dropdown icon"></i>
             <div class="menu">
-              <a href="/porched/br/" class="item">brezhoneg</a>
+              <a href="/br/" class="item">brezhoneg</a>
             </div>
           </div>
         </div>
@@ -40,116 +40,43 @@
   <div class="full height">
 
     <!-- side menu -->
-    <div class="toc">
-      <div class="ui vertical secondary big menu">
-        <div class="header item">
-          <div class="ui sub header">Ressources numériques</div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          Dictionnaires
-          <i class="book icon"></i>
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/meurgorf/"><i class="history icon"></i>MeurGorf - Dictionnaire historique du breton</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          Bases de données
-          <i class="database icon"></i>
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/kerofis/"><i class="map marked alternate icon"></i>KerOfis - Base de donnée toponymique</a>
-            <a class="item" href="http://www.fr.brezhoneg.bzh/36-termofis.htm"><i class="search icon"></i>TermOfis - Base de donnée terminologique</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="folder icon"></i>
-          Corpus
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a href="/porched/fr/corpus/text/" class="item"><i class="file alternate icon"></i>Corpus textuel</a>
-            <a href="/porched/fr/corpus/audio/" class="active item"><i class="file audio icon"></i>Corpus audio</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="user icon"></i>
-          Utiliser le breton
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a href="/porched/fr/utiliser/" class="item">
-              <i class="users icon"></i>
-              Sur les réseaux sociaux
-            </a>
-            <a href="#" class="item">
-              <i class="desktop icon"></i>
-              Sur son site internet
-            </a>
-          </div>
-        </div>
-        <div class="ui divider">
-        </div>
-        <div class="header item">
-          <div class="ui sub header">Outils numériques</div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="globe europe icon"></i>Traduction
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/apertium/index.fra.html"><i class="language icon"></i>Apertium - Traducteur automatique</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="microphone icon"></i>
-          Parole
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/porched/fr/sintezenn/"><i class="comment icon"></i>MouezhOfis - Synthèse de la parole</a>
-          </div>
-        </div>
-        <div class="ui left pointing dropdown item">
-          <i class="tools icon"></i>
-          Autres outils
-          <i class="ui dropdown icon"></i>
-          <div class="menu">
-            <a href="#" class="item"><i class="spell check icon"></i>Correcteurs orthographiques</a>
-          </div>
-        </div>
-        <div class="ui divider"></div>
-        <div class="header item">
-          <div class="ui sub header">Les technologies de la langue</div>
-        </div>
-        <a class="item" href="/porched/fr/strategie/">
-          <i class="tasks icon"></i>Stratégie numérique
-        </a>
-        <a class="item">
-          <i class="question icon"></i>A propos
-        </a>
-        <div class="ui divider"></div>
-      </div>
-    </div>
+    <?php require('../includes/menu.html') ?>
     <!-- end side menu -->
 
 
     <div class="page">
       <div class="ui doubling stackable grid container main">
         <div class="sixteen wide column">
+
+          <!-- SUB MENU -->
+					<div class="ui two item pointing menu">
+						<a class="item" href="/fr/corpus/text.php">
+							Corpus de textes
+						</a>
+						<a class="item active" href="/fr/corpus/audio.php">
+							Corpus audios
+						</a>
+					</div>
+
+          <div class="ui icon message">
+            <i class="question icon"></i>
+            <div class="content">
+              <a href="https://fr.wikipedia.org/wiki/Corpus" class="ui labeled icon right floated button">
+                <i class="wikipedia icon"></i>
+                En savoir plus</a>
+              <div class="header">
+                Qu'est ce qu'un corpus ?
+              </div>
+              <p>Un corpus est un ensemble de documents (textes, images, vidéos, etc.) regroupées dans le but d'effectuer des traitements informatiques. Ils représentent un échantillon de la langue, qui peut être général ou spécifique à un domaine,
+                une époque, un registre de langue...</p>
+            </div>
+          </div>
+
           <div class="ui very padded segment">
             <h1 class="ui header"><em data-emoji=":speaking_head:"></em> Corpus audio</h1>
             <p>
               Sur cette page, vous pourrez trouver les différents corpus audio disponibles en langue bretonne sur Internet.
             </p>
-            <div class="ui icon message">
-              <i class="question icon"></i>
-              <div class="content">
-                <a href="https://fr.wikipedia.org/wiki/Corpus" class="ui labeled icon right floated button">
-                  <i class="wikipedia icon"></i>
-                En savoir plus</a>
-                <div class="header">
-                  Qu'est ce qu'un corpus ?
-                </div>
-                <p>Un corpus est un ensemble de documents (textes, images, vidéos, etc.) regroupées dans le but d'effectuer des traitements informatiques. Ils représentent un échantillon de la langue, qui peut être général ou spécifique à un domaine, une époque, un registre de langue...</p>
-              </div>
-            </div>
 
             <div class="ui hidden divider"></div>
 
